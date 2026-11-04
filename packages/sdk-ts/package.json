@@ -1,0 +1,59 @@
+{
+  "name": "@onvcodes/sdk",
+  "version": "1.0.0",
+  "description": "ONV SaaS 平台官方 REST API 客户端 SDK —— Agent 管理、回测、交易、AI 分析与市场数据",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "onv",
+    "sdk",
+    "api-client",
+    "trading",
+    "backtest",
+    "agent",
+    "quant",
+    "rest"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sftgroup/onv-mcp.git",
+    "directory": "packages/sdk-ts"
+  },
+  "homepage": "https://onv.codes"
+}

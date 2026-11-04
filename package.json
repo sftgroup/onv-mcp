@@ -1,0 +1,22 @@
+{
+  "name": "onv-mcp",
+  "private": true,
+  "description": "ONV MCP server 与官方 SDK 的公开镜像仓",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sftgroup/onv-mcp.git"
+  },
+  "homepage": "https://onv.codes/mcp-setup",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w packages/sdk-ts && npm run build -w packages/mcp-server",
+    "typecheck": "npm run build -w packages/sdk-ts && npm run typecheck -w packages/sdk-ts && npm run typecheck -w packages/mcp-server",
+    "test": "npm run test -w packages/sdk-ts && npm run test -w packages/mcp-server"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

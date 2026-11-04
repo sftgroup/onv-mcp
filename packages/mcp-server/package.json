@@ -1,0 +1,59 @@
+{
+  "name": "@onvcodes/mcp-server",
+  "mcpName": "codes.onv/onv-mcp",
+  "version": "1.0.2",
+  "description": "ONV 平台的 MCP (Model Context Protocol) Server —— 将 Agent 管理、回测、AI 分析与市场数据能力暴露为 MCP 工具，供 Claude Desktop / Cursor 等 AI Agent 调用",
+  "type": "module",
+  "bin": {
+    "onv-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "start": "node dist/server.js"
+  },
+  "keywords": [
+    "onv",
+    "mcp",
+    "model-context-protocol",
+    "claude-desktop",
+    "cursor",
+    "agent",
+    "backtest",
+    "trading",
+    "quant"
+  ],
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.25 || ^4.0"
+  },
+  "devDependencies": {
+    "@onvcodes/sdk": "*",
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.0",
+    "vitest": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sftgroup/onv-mcp.git",
+    "directory": "packages/mcp-server"
+  },
+  "homepage": "https://onv.codes/mcp-setup",
+  "bugs": {
+    "url": "https://github.com/sftgroup/onv-mcp/issues"
+  }
+}

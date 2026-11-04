@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "codes.onv/onv-mcp",
+  "description": "量化策略回测、组合配置与多交易所执行（14 家通道）",
+  "version": "1.0.2",
+  "websiteUrl": "https://onv.codes",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@onvcodes/mcp-server",
+      "version": "1.0.2",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://onv.codes/mcp"
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/sftgroup/onv-mcp",
+    "source": "github",
+    "subfolder": "packages/mcp-server"
+  }
+}
