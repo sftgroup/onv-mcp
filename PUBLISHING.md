@@ -6,7 +6,8 @@
 
 ```bash
 # 在内部主仓根目录
-scripts/public-mcp/export.sh /tmp/onv-mcp-public
+git clone https://github.com/sftgroup/onv-mcp.git /tmp/onv-mcp-public
+scripts/public-mcp/export.sh /tmp/onv-mcp-public   # 保留 .git，覆盖工作树
 
 # 校验产物可独立构建
 cd /tmp/onv-mcp-public
@@ -15,13 +16,13 @@ npm run typecheck
 npm test
 npm run build
 
-# 推送到公开仓（首次需 git init）
-git init -b main
+# 提交并推送
 git add -A
 git commit -s -m "chore: sync from internal main (<日期>)"
-git remote add origin https://github.com/sftgroup/onv-mcp.git
-git push -u origin main
+git push origin main
 ```
+
+首次建仓（仓库尚不存在时）：`git init -b main` + `git remote add origin` 后可直接推送。
 
 导出脚本会做四类机械化改写：`@onv/sdk` → `@onvcodes/sdk`、`file:` 依赖改为 workspace `*`、
 补 `repository` / `homepage`、补 SPDX 文件头。
