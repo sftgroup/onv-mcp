@@ -1,0 +1,22 @@
+{
+  "name": "onv-quant",
+  "version": "1.0.3",
+  "description": "ONV quant research and trading MCP server: market data, factor catalog, backtests, strategy passports and trade execution through one endpoint.",
+  "author": {
+    "name": "sftgroup",
+    "email": "security@onv.codes"
+  },
+  "homepage": "https://onv.codes/mcp-setup",
+  "repository": "https://github.com/sftgroup/onv-mcp",
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "quant",
+    "backtest",
+    "trading",
+    "crypto",
+    "factors"
+  ],
+  "logo": "assets/logo-400.png",
+  "mcpServers": "mcp.json"
+}

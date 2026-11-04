@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "onv": {
+      "command": "npx",
+      "args": ["-y", "@onvcodes/mcp-server@1.0.3"]
+    }
+  }
+}
